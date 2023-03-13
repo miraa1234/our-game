@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8018b2b2984ab784bb1374dd825be351, type: 3}
   m_Name: ExampleCard
   m_EditorClassIdentifier: 
-  _cardName: 
+  _cardName: Example
   _cardType: 0
-  _cardDescription: 
-  _cardImage: {fileID: 0}
-  _cardObject: {fileID: 0}
+  _cardDescription: An example card to showcase how card objects work.
+  _cardImage: {fileID: 21300000, guid: adc9b950aa37fdb449edac68b37bb0e7, type: 3}
+  _cardObject: {fileID: 899428459418414007, guid: e5f4daf24146ee040b5a2d7a73b30aa0, type: 3}
