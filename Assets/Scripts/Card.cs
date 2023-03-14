@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
     [SerializeField] private CardInfo _cardInfo;
     [SerializeField] private TMP_Text _nameText, _typeText, _descriptionText, _amountText;
-    [SerializeField] private SpriteRenderer _artSpriteRenderer;
+    [SerializeField] private Image _cardImage;
 
     private void Start()
     {
@@ -19,6 +20,6 @@ public class Card : MonoBehaviour
         _nameText.text = _cardInfo.GetCardName;
         _typeText.text = _cardInfo.GetCardType.ToString();
         _descriptionText.text = _cardInfo.GetCardDescription;
-        _artSpriteRenderer.sprite = _cardInfo.GetCardImage;
+        _cardImage.sprite = _cardInfo.GetCardImage;
     }
 }
