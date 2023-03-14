@@ -43,10 +43,20 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnOpenMenu(InputValue value)
+		{
+
+		}
+
+        public void OnDebug(InputValue value)
+        {
+			DeckManager.Instance.TriggerDebug();
+        }
 #endif
 
 
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 

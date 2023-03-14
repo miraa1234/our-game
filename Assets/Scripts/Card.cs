@@ -2,23 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
     [SerializeField] private CardInfo _cardInfo;
     [SerializeField] private TMP_Text _nameText, _typeText, _descriptionText, _amountText;
-    [SerializeField] private SpriteRenderer _artSpriteRenderer;
+    [SerializeField] private Image _cardImage;
+
+    private Transform _player;
 
     private void Start()
     {
-        InitializeCard();
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void InitializeCard()
+    private void Update()
     {
-        _nameText.text = _cardInfo.GetCardName;
-        _typeText.text = _cardInfo.GetCardType.ToString();
-        _descriptionText.text = _cardInfo.GetCardDescription;
-        _artSpriteRenderer.sprite = _cardInfo.GetCardImage;
+        transform.LookAt(_player.transform.position + new Vector3(0, 1.375f, 0));
+    }
+
+    public void InitializeCard(CardInfo cardInfo, int amountInDeck)
+    {
+        _cardInfo = cardInfo;
+
+        _amountText.text = amountInDeck.ToString();
+
+        _nameText.text = cardInfo.GetCardName;
+        _typeText.text = cardInfo.GetCardType.ToString();
+        _descriptionText.text = cardInfo.GetCardDescription;
+        _cardImage.sprite = cardInfo.GetCardImage;
     }
 }
