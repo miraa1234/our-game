@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeckManager : MonoBehaviour
+public class DeckManager : MonoSingleton<DeckManager>
 {
     public Dictionary<CardInfo, int> _deck = new Dictionary<CardInfo, int>();
 
