@@ -7,8 +7,6 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
-		public DeckManager deckManager;
-
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -46,9 +44,14 @@ namespace StarterAssets
 			SprintInput(value.isPressed);
 		}
 
+		public void OnOpenMenu(InputValue value)
+		{
+
+		}
+
         public void OnDebug(InputValue value)
         {
-			deckManager.TriggerDebug();
+			DeckManager.Instance.TriggerDebug();
         }
 #endif
 

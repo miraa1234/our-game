@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "OpenMenu",
+                    "type": "Button",
+                    "id": "4ef2d38b-3dd3-40cc-95ad-2b3cd04443fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Debug",
                     "type": "Button",
                     "id": "d4598ffe-2032-41e2-95eb-f90c15e54302",
@@ -236,6 +245,17 @@
                     "processors": "",
                     "groups": "KeyboardMouse;Gamepad;Xbox Controller;PS4 Controller",
                     "action": "Debug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "117bfdff-140f-456f-8be0-13f2993c3bba",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "OpenMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
